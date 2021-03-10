@@ -2,7 +2,7 @@
 
 Google Books React Search Project
 
-[![GitHub followers](https://img.shields.io/github/followers/Nmenotti20?label=Follow&style=social)](https://github.com/Nmenotti20) [![project-top-language](https://img.shields.io/github/languages/top/Nmenotti20/GB_ReactSearch?color=yellow)](https://github.com/Nmenotti20/GB_React_Search) [![license](https://img.shields.io/badge/License-mit-brightgreen.svg)](https://choosealicense.com/licenses/mit/)
+[![GitHub followers](https://img.shields.io/github/followers/Nmenotti20?label=Follow&style=social)](https://github.com/Nmenotti20) [![project-top-language](https://img.shields.io/github/languages/top/Nmenotti20/Accord?color=yellow)](https://github.com/Nmenotti20/GB_React_Search) [![license](https://img.shields.io/badge/License-mit-brightgreen.svg)](https://choosealicense.com/licenses/mit/)
 
 ##### Version 1.0
 
@@ -27,7 +27,7 @@ Google Books React Search Project
 
 ![GitHub Repo](https://github.com/Nmenotti20/GB_React_Search)<br>
 
-![Heroku Deployed App]()<br>
+![Heroku Deployed App](https://git.heroku.com/nm-google-books-react.git)<br>
 
 ![Additional Links]()<br>
 
