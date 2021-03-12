@@ -40,7 +40,7 @@ function Saved() {
             <hr/>
             {
                 savedBooks.map((book, index) => (
-                    <div key={index} className="container-fluid mb-5">
+                    <div key={index} className="mb-5">
                         <div className="row">
                             <h4>{book.title}</h4>
                             <span className="ml-auto">
