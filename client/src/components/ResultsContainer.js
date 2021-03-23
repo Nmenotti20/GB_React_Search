@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Modal } from 'react-bootstrap';
+import React, { useEffect, useState, useRef } from 'react';
+import { Modal, OverlayTrigger} from 'react-bootstrap';
 import Axios from '../utils/API';
+
 
 function ResultsContainer({results}) {
 
@@ -14,6 +15,8 @@ function ResultsContainer({results}) {
     });
     const [showModal, setShowModal] = useState(false);
     const [savedBook, setSavedBook] = useState();
+    const [show, setShow] = useState(false);
+    const target = useRef(null);
     
     function viewBook(e) {
         setViewedBook(results[e.target.parentNode.id].volumeInfo);
@@ -48,7 +51,22 @@ function ResultsContainer({results}) {
             image: allBookInfo.imageLinks.thumbnail,
             description: description
         })
+        setShow(!show)
     }
+
+    const saved = (
+        <div
+            style={{
+              backgroundColor: 'rgba(255, 100, 100, 0.85)',
+              padding: '2px 10px',
+              color: 'white',
+              borderRadius: 3,
+            }}
+          >
+            Book Saved Successfully!
+        </div>
+
+    )
 
     return (
         <div className="jumbotron p-3 border">
@@ -61,7 +79,15 @@ function ResultsContainer({results}) {
                             <h4>{book.volumeInfo.title}</h4>
                             <span className="ml-auto" id={index}>
                                 <button onClick={viewBook} className="btn btn-success">View</button>
+                                {/* <button ref={index} onClick={saveBook} className="ml-2 btn btn-primary">Save</button> */}
+                                    <OverlayTrigger
+                                    trigger="click" placement="top"
+                                    overlay={saved}
+                                    //     <UpdatingPopover id="popover-contained">{content}</UpdatingPopover>
+                                    // }
+                                    >
                                 <button onClick={saveBook} className="ml-2 btn btn-primary">Save</button>
+                                    </OverlayTrigger>
                             </span>
                         </div>
                         <p>Written By:
